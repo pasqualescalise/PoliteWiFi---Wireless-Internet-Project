@@ -115,7 +115,7 @@ func LaunchLocalizationAttack(victim_mac []byte, wait_time int) {
 	go attack.ContinuousAttack(command_channel, done_channel, wait_time)
 
 	display_string := "Transmitting 1 packet each " + strconv.Itoa(wait_time)  + "ms - Press q to go back to the main page\n\n"
-	display_string += "These are the Received Signal Strength Indicator [dBm] of the last 5 packets\n\n"
+	display_string += "These are the Received Signal Strength Indicator [dBm] of the last 15 packets\n\n"
 	display_string += "They can be used to localize the victim, since they become higher (they're negative numbers) the closer the attacker is to the victim\n\n"
 
 	rssi_screen := tview.NewTextView().
